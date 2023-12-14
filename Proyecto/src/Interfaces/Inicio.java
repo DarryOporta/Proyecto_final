@@ -13,6 +13,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Inicio extends javax.swing.JFrame {
     
+    //definicion de objetos y matrices 
     Cine peli = new Cine();
 
     private DefaultTableModel tblModel;
@@ -40,7 +41,7 @@ public class Inicio extends javax.swing.JFrame {
         //Inicia tabla de reserva de yoga 
         initTableRegY();
         
-        //
+        //Inicia tabla de reserva de Clases de baile
         initTableRegCD();
 
     }
@@ -55,8 +56,6 @@ public class Inicio extends javax.swing.JFrame {
         jLUsuario = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLReservas = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLReportes = new javax.swing.JLabel();
         jLInicio = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jTableMenus = new javax.swing.JTabbedPane();
@@ -198,30 +197,6 @@ public class Inicio extends javax.swing.JFrame {
             .addComponent(jLReservas, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
         );
 
-        jPanel6.setBackground(new java.awt.Color(3, 140, 140));
-
-        jLReportes.setFont(new java.awt.Font("Bauhaus 93", 0, 18)); // NOI18N
-        jLReportes.setForeground(new java.awt.Color(255, 255, 255));
-        jLReportes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLReportes.setText("Reportes");
-        jLReportes.setToolTipText("");
-        jLReportes.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLReportesMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLReportes, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-        );
-
         jLInicio.setFont(new java.awt.Font("Bauhaus 93", 0, 18)); // NOI18N
         jLInicio.setForeground(new java.awt.Color(255, 255, 255));
         jLInicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -239,7 +214,6 @@ public class Inicio extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,13 +224,11 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
+                .addGap(94, 94, 94)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(224, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 190, 490));
@@ -1087,7 +1059,9 @@ public class Inicio extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
 
+    //navegacion de menus
     private void jLUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLUsuarioMouseClicked
         jTableMenus.setSelectedIndex(1);
     }//GEN-LAST:event_jLUsuarioMouseClicked
@@ -1095,10 +1069,6 @@ public class Inicio extends javax.swing.JFrame {
     private void jLReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLReservasMouseClicked
         jTableMenus.setSelectedIndex(2);
     }//GEN-LAST:event_jLReservasMouseClicked
-
-    private void jLReportesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLReportesMouseClicked
-        jTableMenus.setSelectedIndex(3);
-    }//GEN-LAST:event_jLReportesMouseClicked
 
     private void jLInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLInicioMouseClicked
         jTableMenus.setSelectedIndex(0);
@@ -1117,6 +1087,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jResGymMouseClicked
 
     private void jResCineMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jResCineMouseClicked
+        //activa la clase cine
         peli.cinema();
     }//GEN-LAST:event_jResCineMouseClicked
 
@@ -1135,7 +1106,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jButtonRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRegistrarMouseClicked
 
     }//GEN-LAST:event_jButtonRegistrarMouseClicked
-
+    
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
         int id = Integer.valueOf(jTextID.getText());
         String nombre = jTextNombre.getText();
@@ -1470,7 +1441,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jConUsuario;
     private javax.swing.JLabel jLDance;
     private javax.swing.JLabel jLInicio;
-    private javax.swing.JLabel jLReportes;
     private javax.swing.JLabel jLReservas;
     private javax.swing.JLabel jLUsuario;
     private javax.swing.JLabel jLabel1;
@@ -1507,7 +1477,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
